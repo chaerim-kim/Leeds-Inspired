@@ -1,0 +1,6 @@
+flask
+flask-wtf
+wtforms
+flask-restful
+requests
+jsonify

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Categories</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet"/>
+    <!--    <link href="css/main.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="../static/css/main.css">
+
+</head>
+<body>
+<div class="s004">
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+
+        <fieldset>
+            <legend>What kind of event do you want to attend?</legend>
+            <div class="inner-form">
+                <div class="input-field">
+                    <div class="input-field-two">
+                    {{ form.EventCategories }}
+                    </div>
+                    <div class="input-field">
+
+                    <input class="btn-search" type="submit" value="submit"/>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+
+
+{# --------- scripts ---------#}
+<script src="../static/js/extention/choices.js"></script>
+
+<script>
+    var textPresetVal = new Choices('#choices-text-preset-values',
+        {
+            removeItemButton: true,
+        });
+</script>
+
+{# --------- script ends ---------#}
+
+
+</body>
+</html>
+
+
