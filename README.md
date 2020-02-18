@@ -1,3 +1,4 @@
+# Leeds Inspired Web Search
 
 ## Overview
 This app lets the user select the category of the event they want to attend.
@@ -10,37 +11,39 @@ It lists all the events, and users are prompt to choose one event, which then sh
 ## Installation
 $ module add python/3.4.3
 
-Creating a virtual environment
-
+Creating a virtual environment  
 $ virtualenv flask
 
-Activating the virtual environment -flask 
-
+Activating the virtual environment -flask  
 $ source flask/bin/activate
 
-Install dependencies. ()-U: update if already installed)
-
+Install dependencies. ()-U: update if already installed)  
 $ pip install -U -r requirements.txt
 
-Setting development environment
-
+Setting development environment  
 $ export FLASK_ENV=development
 
 
 ## Running Server and Client
-Running the server
-
+Running the server  
 $ python server.py
 
 
-Running the client
-
+Running the client  
 $ cd client
 
 $ python client.py
 
 
 ## License
-[Leeds Inspired](http://api.leedsinspired.co.uk/)
+- [Leeds Inspired](http://api.leedsinspired.co.uk/)  
+- [Yelp Fusion](https://www.yelp.com/fusion)
 
-[Yelp Fusion](https://www.yelp.com/fusion)
+
+## What I learned
+- Writing server and clients to deploy and consume web services.
+- Building a web service that integrates 3 services.
+- Using REST API for each services
+- Parsing of JSON web data
+- Communication between web services and passing session information.
+- User interface design for usability and ease of navigation.
