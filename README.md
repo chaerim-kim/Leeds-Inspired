@@ -1,49 +1,51 @@
 # Leeds Inspired Web Search
 
-## Overview
-This app lets the user select the category of the event they want to attend.
+💃 Search the kind of **event** you want to attend, and scroll through **Yelp's recommendations** of places to go, eat, and drink nearby!
 
-It then redirects and fetches the local Leeds events of user's interest, via leedsinspired's API.
+## 🎨 Features / 주요 기능
 
-It lists all the events, and users are prompt to choose one event, which then shows the venue information of that event or the restaurants near that venue, using Yelp's API.
+- [x]  Use of REST APIs
+- [x]  User to select the **category of the event**
+- [x]  Fetch **local Leeds events** of user’s choice, via **LeedsInspired’s** API.
+- [x]  User to **select one event** from the recommendations
+- [x]  Lists the **venue information** alongside the **restaurants nearby,** via **Yelp’s** API.
+- [x]  Server and Client communication, which passes session information.
 
+## 🐾 Examples / 사용 예제
 
-## Installation
-$ module add python/3.4.3
+![https://user-images.githubusercontent.com/33334078/100367537-b4417f00-3045-11eb-8007-17c8b51410be.gif](https://user-images.githubusercontent.com/33334078/100367537-b4417f00-3045-11eb-8007-17c8b51410be.gif)
 
-Creating a virtual environment  
-$ virtualenv flask
+## 📚 Stack / 개발 환경
 
-Activating the virtual environment -flask  
-$ source flask/bin/activate
+- Python
+- [Flask](https://flask.palletsprojects.com/) - micro web framework for Python
+- HTML, CSS - For templating and styling
 
-Install dependencies. ()-U: update if already installed)  
-$ pip install -U -r requirements.txt
+## ⚒ Installation / 실행 방법
 
-Setting development environment  
-$ export FLASK_ENV=development
+### Installation
 
+1. Create a virtual environment
+`virtualenv flask`
+2. Activate the flask virtual environment 
+`source flask/bin/activate`
+3. Install dependencies. (-U: update if already installed)
+`pip install -U -r requirements.txt`
+4. Setting development environment
+`export FLASK_ENV=development`
 
-## Running Server and Client
-Running the server  
-$ python server.py
+### Running Server and Client
 
+1. Run the server
+`python server.py`
+2. Run the client
 
-Running the client  
-$ cd client
+    `cd client
+    python client.py`
 
-$ python client.py
+## 📜 License
 
+This project is licensed under the terms of the [MIT license.](https://opensource.org/licenses/mit-license.php)
 
-## License
-- [Leeds Inspired](http://api.leedsinspired.co.uk/)  
-- [Yelp Fusion](https://www.yelp.com/fusion)
-
-
-## What I learned
-- Writing server and clients to deploy and consume web services.
-- Building a web service that integrates 3 services.
-- Using REST API for each services
-- Parsing of JSON web data
-- Communication between web services and passing session information.
-- User interface design for usability and ease of navigation.
+- [Leeds Inspired API](http://api.leedsinspired.co.uk/)
+- [Yelp Fusion API](https://www.yelp.com/fusion)
