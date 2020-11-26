@@ -23,7 +23,7 @@ class EventSelect(Form):
 @app.route('/', methods=['GET', 'POST'])
 def category():
     # connect to server to fetch information
-    url = 'http://localhost:1111'
+    url = 'http://localhost:5000'
 
     # requests json and parse it
     r = requests.get(url)
@@ -62,7 +62,7 @@ def event():
     params = {
         'key': 'B8Tn2171l437434M6XvWyA1O77u5HAQ1Oor1E4B5k87Mi',
         'start_date': '22-11-2019',
-        'end_date': '29-11-2019',
+        'end_date': '30-11-2019',
         'category_id': user_category
     }
 
@@ -143,6 +143,7 @@ def yelp():
     businesses = parsed['businesses']
 
     business_list = []
+    # link_list = []
 
     for i in businesses:
         business_info = {
@@ -151,11 +152,22 @@ def yelp():
             'Price': i.get('price'),
             'Address': ", ".join(i['location']['display_address']),
             'Phone': i.get('display_phone'),
+            'URL': i.get('url'),
+            'Image': i.get('image_url')
         }
 
         business_list.append(business_info)
 
-    return render_template('yelp_list.html', business_list=business_list, search_term=search_term)
+    # for i in businesses:
+    #     link_info = {
+    #         'URL': i.get('url'),
+    #         'Image': i.get('image_url')
+    #     }
+    #
+    #     link_list.append(link_info)
+
+
+    return render_template('yelp_list.html', business_list=business_list, search_term=search_term )
 
 
 if __name__ == '__main__':

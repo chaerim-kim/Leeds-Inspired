@@ -27,26 +27,38 @@
         <div id="fh5co-about">
             <div class="row animate-box">
                 <div class="col-md-12 col-md-offset-0 text-center heading-section">
-                    <h3>Yelp :: Venue/ Restaurant</h3>
+                    <h3>Yelp :: Venue & Restaurant</h3>
                     <p>The venue of the event is <b>{{ search_term }}</b></p>
                     <hr>
                     <br>
+
                     {% if business_list %}
-                    {% for business in business_list %}
-                    {% for key, value in business.items() %}
-                    <p><b>{{ key }} </b>: {{ value }} </p>
-                    {% endfor %}
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
-                    <br>
-                    {% endfor %}
+                        {% for business in business_list %}
+                            {% for key, value in business.items() %}
+
+                                {% if key == 'URL' %}
+                                    <p><b>{{ key }} </b>: <a href={{ value }}>Link to Yelp's page</a><br><br>
+
+                                {% elif key == 'Image' %}
+                                    <img src="{{ value }}" alt="Venue Image" style="width:60%;height:60%; border-radius:7%; box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);"><br>
+
+                                {% else %}
+                                    <p><b>{{ key }} </b>: {{ value }} </p>
+
+                                {% endif %}
+
+                            {% endfor %}
+                            <br>
+                            <br>
+                            <hr>
+                            <br>
+                            <br>
+                        {% endfor %}
 
                     {% else %}
-                    <p>The business: {{ search_term }} doesn't exist on yelp. Try another event.</p>
+                        <p>The business: {{ search_term }} doesn't exist on yelp. Try another event.</p>
 
-                    {% endif%}
+                    {% endif %}
 
                 </div>
             </div>
