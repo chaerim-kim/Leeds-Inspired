@@ -1,7 +1,8 @@
 # Leeds Inspired Web Search
 
-💃 Search the kind of **event** you want to attend, and scroll through **Yelp's recommendations** of places to go, eat, and drink nearby!
+> 💃 Search the kind of event you want to attend, and scroll through **Yelp's recommendations** of places to go, eat, and drink nearby!
 
+A website for Leeds-based users to search a type of event, get recommendations of local events and venues; powered by Leeds Inspired and Yelp API using Python Flask.
 
 ## 🎨 Features / 주요 기능
 
