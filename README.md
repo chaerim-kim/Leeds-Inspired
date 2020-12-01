@@ -4,6 +4,7 @@
 
 A website for Leeds-based users to search a type of event, get recommendations of local events and venues; powered by Leeds Inspired and Yelp API using Python Flask.
 
+
 ## 🎨 Features / 주요 기능
 
 - [x]  Use of REST APIs - [Leeds Inspired API](http://api.leedsinspired.co.uk/) and [Yelp Fusion API](https://www.yelp.com/fusion)
@@ -12,6 +13,12 @@ A website for Leeds-based users to search a type of event, get recommendations o
 - [x]  User to **select one event** from the recommendations
 - [x]  Lists the **venue information** alongside the **restaurants nearby,** via **Yelp’s** API.
 - [x]  Server and Client communication, which passes session information.
+
+
+
+## ➰ Project Duration
+November, 2019
+
 
 
 ## 🐾 Examples / 사용 예제
